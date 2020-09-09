@@ -1,11 +1,12 @@
 import argparse
 from icalendar import Calendar
+from gooey import Gooey
 
+@Gooey
 def parse_args():
-    parser = argparse.ArgumentParser(description='Takes local ical file and filters events to \
-                                                  those containing provided phrases')
+    parser = argparse.ArgumentParser(description='Takes local ical file and filters events to those containing provided phrases')
     parser.add_argument('-n', '--negate', dest='negate', action='store_true',
-                        help='Filter to events not containing provided phrases')
+                        help='Filter to events not containing the provided phrases')
     parser.add_argument('-a', '--and', dest='ands', action='store_true',
                         help='Evaluate each event against multiple phrases using "and" instead of "or"')
     parser.add_argument('-d', '--description', dest='description', action='store_true',

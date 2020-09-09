@@ -1,3 +1,6 @@
 env/
 .vscode/
 *.ics
+build/
+dist/
+*.pyc
